@@ -1,0 +1,28 @@
+.btnCon{
+    padding: 10px 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: all 200ms;
+    font-size: 13px;
+    /* border-width: 0; */
+}
+
+.btnCon:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-color: rgb(122, 180, 227);
+    color: white;
+    padding: 15px 15px;
+    
+}
+.btnCon:active{
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.newBtn{
+    color: white;
+}
