@@ -405,7 +405,7 @@ label{
     border-radius: 10px;
     margin-top: -8px;
     background-color: #f1faff;
-    margin-left: 210px;
+    margin-left: 200px;
 }
 
 
@@ -431,13 +431,20 @@ label{
         
     }
     .cusInput{
-        margin-left: -5px !important;
-        width:70% !important;
+        margin-left: 2px !important;
+        width: 180px !important;
+        
+    }
+    .cusDiv{
+        margin-left: 0px !important;
     }
     .curInput{
-        margin-left: -5px !important;
-        width: 90% !important;
+        margin-left: 2px !important;
+        width: 180px !important;
         
+    }
+    .curr{
+        width: 120px !important;
     }
     .curDiv{
         margin-top: -30px !important;
@@ -447,7 +454,7 @@ label{
         margin-left: -1px !important;
     }
     .accInput{
-        width: 50px !important;
+        width: 90px !important;
         margin-left: -1px !important;
     }
     .accDis{
@@ -456,6 +463,11 @@ label{
     }
     .cusType{
         margin-top: -10px;
+        margin-left: 2px !important;
+    }
+    .cusTInput{
+        width: 180px !important;
+        margin-left: 2px !important;
     }
     .conc{
         margin-top: -40px;
@@ -465,21 +477,64 @@ label{
         width: 180px !important;
     }
     .effLab{
-        width: 30% !important;
+        width: 50% !important;
     }
     .loanLab{
-        width: 30% !important;
+        width: 50% !important;
+        margin-left: -10px !important;
+    }
+    .loanDInput{
+        width: 90% !important;
     }
     .facAmt{
-        width: 70px !important;
+        width: 80px !important;
     }
     .tenLab{
-        width: 40% !important;
+        width: 60% !important;
     }
     .tenInput{
         width: 70% !important;
     }
     .laslas{
         margin-left: -1px !important;
+    }
+    .netInput{
+        width: 80px !important;
+    }
+    .debtInput{
+        width: 80px !important;
+    }
+    .restInput{
+        width: 200px !important;
+    }
+    .princInput{
+        width: 200px !important;
+    }
+    .freqInput{
+        width: 200px !important;
+    }
+    .expInput{
+        width: 100px !important;
+    }
+    .curLab{
+        width: 40% !important;
+        
+    }
+    .facLab{
+        width: 50% !important;
+    }
+    .intRLab{
+        width: 50% !important;
+        margin-left: -35px !important;
+    }
+    .intRInp2{
+
+    }
+    .currency{
+        margin-left: -29px !important;
+    }
+    .intRInp2{
+        margin-left: 85px !important;
+        margin-top: 5px !important;
     }
 }

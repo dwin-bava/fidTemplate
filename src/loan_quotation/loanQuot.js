@@ -18,7 +18,7 @@ import Box from "@mui/material/Box";
 import {DataGrid, GridToolbar} from "@mui/x-data-grid";
 import Swal from 'sweetalert2';
 import Dropdown from 'react-bootstrap/Dropdown';
-
+import { Input } from '@mantine/core';
 
 
 
@@ -172,35 +172,7 @@ const okay = () => {
         </div>
         <div className='topIcns'>
             {/* <div className='topSpace'></div> */}
-            <div className='btns'>
-                {/* <div className='newBtn'>
-                <ButtonOption text="New" icon={<HiDocumentText size={20}/>}/>
-                </div>
-                <div className='deleteBtn'>
-                <ButtonOption text="Delete" icon={<MdDelete size={20} color=''/>}/>
-                </div> 
-                <div className='authorizeBtn'>
-                <ButtonOption text="Authorize" icon={<TbLetterA size={20} color=''/>}/>
-                </div> 
-                <div className='viewBtn'>
-                <ButtonOption text="View" icon={<AiFillEye size={20}/>}/>
-                </div> 
-                <div className='okBtn' onClick={okay}>
-                <ButtonOption text="Ok" icon={<AiOutlineCheck size={20} width='20'/>}/>
-                </div> 
-                <div className='cancelBtn'>
-                <ButtonOption text="Cancel" icon={<GiCrossMark size={20} color=''/>}/>
-                </div>
-                <div className='rejectBtn'>
-                <ButtonOption text="Reject" icon={<AiFillStop size={20} color=''/>}/>
-                </div>
-                <div className='helpBtn'>
-                <ButtonOption text="Help"   icon={<FiHelpCircle size={20}/>}/>
-                </div>
-                <div className='exitBtn' onClick={close}>
-                <ButtonOption text="Exit" icon={<AiOutlinePoweroff size={20} color=''/>}/>
-                </div> */}
-            </div>
+            <div className='btns'></div>
 
             <div className='quotationNo' style={{color:theme.accTxtColor}}>
                 
@@ -209,22 +181,25 @@ const okay = () => {
                     </label>
                     {/* <br></br> */}
                     <input type='text' disabled style={{width:'170px', marginLeft:'10px', borderRadius:'5px', border:'1.5px solid #b0b1b3', backgroundColor:'#f0f1f3'}}/>
-                
+                    {/* <Input.Wrapper label="Application No">
+      <Input />
+    </Input.Wrapper> */}
             </div>
 
 
 
 
         </div>
+        <br></br>
         
-        <hr style={{color:'black', border:'1px solid black'}}></hr>
-        <div>
+        {/* <hr style={{color:'black', border:'1px solid black'}}></hr> */}
+        <div style={{marginTop:'10px'}}>
             <h6 className='accDetText' style={{color:theme.accTxtColor}}>Account Details</h6>
         </div>
         <div className='acc'>
             <Card className='accDetailsCd' style={{borderRadius:'10px', padding:'13px', marginBottom:'10px', backgroundColor: 'rgba(255, 255, 255, 0.9)'}}>
                 <div className='accDetails'>
-                        <div style={{marginLeft:'45px'}}>
+                        <div className='cusDiv' style={{marginLeft:'45px'}}>
 
                             <label>
                             Customer No*
@@ -242,7 +217,7 @@ const okay = () => {
                                 <input type='text' className='curInput' disabled style={{width:'60px', marginLeft:'5px', borderRadius:'5px', border:'1.5px solid #b0b1b3', backgroundColor:'#f0f1f3'}}/>
                                 
                             </div>
-                        <div className='accDiv' style={{marginLeft:'220px'}}>
+                        <div className='accDiv' style={{marginLeft:'210px'}}>
 
                             <label>
                             Account No
@@ -267,7 +242,7 @@ const okay = () => {
                             Customer Type
                             </label>
                             {/* <br></br> */}
-                            <input type='text' className='cusInput' disabled style={{width:'193px', marginLeft:'5px', borderRadius:'5px', border:'1.5px solid #b0b1b3', backgroundColor:'#f0f1f3'}}/>
+                            <input type='text' className='cusTInput' disabled style={{width:'193px', marginLeft:'5px', borderRadius:'5px', border:'1.5px solid #b0b1b3', backgroundColor:'#f0f1f3'}}/>
                     </div>
                     <div className='conc'>
                         <div>
@@ -275,14 +250,14 @@ const okay = () => {
                             <strong>Net Monthly income/Salary</strong>
                             </label>
                             {/* <br></br> */}
-                            <input type='text' disabled style={{width:'100px', marginLeft:'5px', borderRadius:'5px', border:'1.5px solid #b0b1b3', backgroundColor:'#f0f1f3'}}/>
+                            <input type='text' className='netInput' disabled style={{width:'100px', marginLeft:'5px', borderRadius:'5px', border:'1.5px solid #b0b1b3', backgroundColor:'#f0f1f3'}}/>
                         </div>
                         <div>
                             <label>
                             <strong>Debt Service Ratio(DSR)</strong>
                             </label>
                             {/* <br></br> */}
-                            <input type='text' disabled style={{width:'100px', marginLeft:'5px', borderRadius:'5px', border:'1.5px solid #b0b1b3', backgroundColor:'#f0f1f3'}}/>
+                            <input type='text' className='debtInput' disabled style={{width:'100px', marginLeft:'5px', borderRadius:'5px', border:'1.5px solid #b0b1b3', backgroundColor:'#f0f1f3'}}/>
                         </div>
                     </div>
 
@@ -306,21 +281,21 @@ const okay = () => {
                                     <input className='effInput' type='date' placeholder='choose date' style={{width:'150px', marginLeft:'10px', borderRadius:'5px', color:'black', border:'1.5px solid #b0b1b3', height:'30px'}}/>
                                 </div>
                                 <div className='loanProduct' style={{marginBottom:'15px'}}>
-                                    <label style={{marginLeft:'', width:'25%', textAlign:'right'}}>
+                                    <label className='loanLab' style={{marginLeft:'', width:'25%', textAlign:'right'}}>
                                     Loan Product*
                                     </label>
                                     {/* <br></br> */}
                                     <input type='text' style={{width:'50px', marginLeft:'10px', borderRadius:'5px', border:'1.5px solid #b0b1b3'}}/>
                                     <button className='searchBtn'><BiSearchAlt color=''/></button>
-                                    <input type='text' disabled style={{width:'220px', marginLeft:'5px', borderRadius:'5px', backgroundColor:'#f0f1f3', border:'1.5px solid #b0b1b3'}}/>
+                                    <input type='text' className='loanDInput' disabled style={{width:'220px', marginLeft:'5px', borderRadius:'5px', backgroundColor:'#f0f1f3', border:'1.5px solid #b0b1b3'}}/>
                                 </div>
                                 <div className='currency' style={{marginBottom:'15px'}}>
                                     <form>
-                                        <label style={{marginLeft:'', width:'25%', textAlign:'right'}}>
+                                        <label className='curLab' style={{marginLeft:'', width:'25%', textAlign:'right'}}>
                                         Currency*
                                         </label>
                                         {/* <br></br> */}
-                                        <select style={{width:'82px', marginLeft:'10px', borderRadius:'5px', height:'30px', border:'1.5px solid #b0b1b3'}}>
+                                        <select className='curr' style={{width:'82px', marginLeft:'10px', borderRadius:'5px', height:'30px', border:'1.5px solid #b0b1b3'}}>
                                             <option></option>
                                             <option>USD</option>
                                             <option>GHC</option>
@@ -328,20 +303,20 @@ const okay = () => {
                                     </form>
                                 </div>
                                 <div className='facilityAmount' style={{marginBottom:'15px'}}>
-                                    <label style={{marginLeft:'', width:'25%', textAlign:'right'}}>
+                                    <label className='facLab' style={{marginLeft:'', width:'25%', textAlign:'right'}}>
                                     Facility Amount*
                                     </label>
                                     {/* <br></br> */}
                                     <input className='facAmt' type='text' style={{width:'305px', marginLeft:'10px', borderRadius:'5px', border:'1.5px solid #b0b1b3'}}/>
                                 </div>
                                 <div className='interestRate'>
-                                    <label style={{width:'25%', textAlign:'right'}}>
+                                    <label className='intRLab' style={{width:'25%', textAlign:'right'}}>
                                     Interest Rate
                                     </label>
                                     {/* <br></br> */}
                                     <input type='text' style={{width:'80px', marginLeft:'10px', borderRadius:'5px', border:'1.5px solid #b0b1b3'}}/>
                                     <AiOutlinePercentage/> <span>P.M</span>
-                                    <input type='text' style={{width:'80px', marginLeft:'30px', borderRadius:'5px', border:'1.5px solid #b0b1b3'}}/>
+                                    <input className='intRInp2' type='text' style={{width:'80px', marginLeft:'30px', borderRadius:'5px', border:'1.5px solid #b0b1b3'}}/>
                                     <AiOutlinePercentage/> <span>P.A</span>
                                 </div>
                             </Card>
@@ -366,7 +341,7 @@ const okay = () => {
                                     {/* <br></br> */}
                                     <input type='text' style={{width:'80px', marginLeft:'10px', borderRadius:'5px', border:'1.5px solid #b0b1b3'}}/>
                                     <button className='searchBtn'><BiSearchAlt color=''/></button>
-                                    <input type='text' disabled style={{width:'250px', marginLeft:'5px', borderRadius:'5px', backgroundColor:'#f0f1f3', border:'1.5px solid #b0b1b3'}}/>
+                                    <input type='text' className='restInput' disabled style={{width:'250px', marginLeft:'5px', borderRadius:'5px', backgroundColor:'#f0f1f3', border:'1.5px solid #b0b1b3'}}/>
                                 </div>
                                 <div className='prinFreq' style={{marginBottom:'15px'}}>
                                     <label style={{marginLeft:'', width:'30%', textAlign:'right'}}>
@@ -375,7 +350,7 @@ const okay = () => {
                                     {/* <br></br> */}
                                     <input type='text' style={{width:'80px', marginLeft:'10px', borderRadius:'5px', border:'1.5px solid #b0b1b3'}}/>
                                     <button className='searchBtn'><BiSearchAlt color=''/></button>
-                                    <input type='text' disabled style={{width:'250px', marginLeft:'5px', borderRadius:'5px', backgroundColor:'#f0f1f3', border:'1.5px solid #b0b1b3'}}/>
+                                    <input type='text' className='princInput' disabled style={{width:'250px', marginLeft:'5px', borderRadius:'5px', backgroundColor:'#f0f1f3', border:'1.5px solid #b0b1b3'}}/>
                                 </div>
                                 <div className='intFreq' style={{marginBottom:'15px'}}>
                                     <label style={{marginLeft:'', width:'30%', textAlign:'right'}}>
@@ -384,7 +359,7 @@ const okay = () => {
                                     {/* <br></br> */}
                                     <input type='text' style={{width:'80px', marginLeft:'10px', borderRadius:'5px', border:'1.5px solid #b0b1b3'}}/>
                                     <button className='searchBtn'><BiSearchAlt color=''/></button>
-                                    <input type='text' disabled style={{width:'250px', marginLeft:'5px', borderRadius:'5px', backgroundColor:'#f0f1f3', border:'1.5px solid #b0b1b3'}}/>
+                                    <input type='text' className='freqInput' disabled style={{width:'250px', marginLeft:'5px', borderRadius:'5px', backgroundColor:'#f0f1f3', border:'1.5px solid #b0b1b3'}}/>
                                 </div>
                                 <div style={{marginBottom:'15px'}}>
                                     <label className='tenLab' style={{width:'30%', textAlign:'right'}}>
@@ -415,7 +390,7 @@ const okay = () => {
                                             Expiry Date
                                             </label>
                                             {/* <br></br> */}
-                                            <input type='text' disabled style={{width:'170px', marginLeft:'10px', borderRadius:'5px', backgroundColor:'#f0f1f3', border:'1.5px solid #b0b1b3'}}/>
+                                            <input type='text' className='expInput' disabled style={{width:'170px', marginLeft:'10px', borderRadius:'5px', backgroundColor:'#f0f1f3', border:'1.5px solid #b0b1b3'}}/>
                                     </div>
 
                                 </div>
