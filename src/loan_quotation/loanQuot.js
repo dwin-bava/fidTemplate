@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {footerRed} from "./loanQuot.css";
-import {MdDelete, MdOutlineManageSearch} from "react-icons/md";
+import {MdDelete, MdOutlineManageSearch, MdColorLens} from "react-icons/md";
 import {IoMdArrowDropdown} from "react-icons/io"
 import {FcCurrencyExchange} from "react-icons/fc";
 import {GrClose} from "react-icons/gr";
@@ -30,7 +30,7 @@ const columns = [
       field: "SeqNo",
       headerName: "Seq No",
       type: "number",
-      width: 120,
+      width: 105,
       headerClassName: "super-app-theme--header",
     },
     {
@@ -72,6 +72,12 @@ const columns = [
   ];
 
   const object = {
+    theme0: {
+        backgroundImage:"white",
+        headerColor:"rgb(66, 157, 232)",
+        buttonColor:"rgb(66, 157, 232)",
+        footerColor:"rgb(66, 157, 232)"
+    },
     theme1: {
         backgroundImage:"http://localhost:3000/assets/images/back6.jpg",
         headerColor:"rgb(66, 157, 232)",
@@ -92,9 +98,10 @@ const columns = [
     },
     theme4: {
         backgroundImage:"http://localhost:3000/assets/images/back3.jpg",
-        headerColor:"#00b52b",
-        buttonColor:"#00b52b",
-        footerColor:"#00b52b"
+        headerColor:"#00755b",
+        buttonColor:"#00755b",
+        footerColor:"#00755b",
+        accTxtColor:"white"
     },
     theme5: {
         backgroundImage:"http://localhost:3000/assets/images/back_4.jpg",
@@ -113,7 +120,7 @@ const columns = [
 }
 
 function LoanQuotation({handleClose}) {
-const [theme, setTheme] = useState(object.theme1)
+const [theme, setTheme] = useState(object.theme0)
 
 
 
@@ -156,10 +163,11 @@ const okay = () => {
             <div className='navMiddle'></div>
             <div className='navIcon'><Dropdown>
       <Dropdown.Toggle style={{color:'white'}} variant="" id="">
-        {/* <FiSettings color='white'/> */}
+        <MdColorLens style={{marginBottom:"10px"}} />
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
+        <Dropdown.Item href="#/action-0" onClick={()=>setTheme(object.theme0)}>Default</Dropdown.Item>
         <Dropdown.Item href="#/action-1" onClick={()=>setTheme(object.theme1)}>Aqua Blue</Dropdown.Item>
         <Dropdown.Item href="#/action-2" onClick={()=>setTheme(object.theme2)}>Product Orange</Dropdown.Item>
         <Dropdown.Item href="#/action-3" onClick={()=>setTheme(object.theme3)}>Bee Yellow</Dropdown.Item>
@@ -174,7 +182,7 @@ const okay = () => {
             {/* <div className='topSpace'></div> */}
             <div className='btns'></div>
 
-            <div className='quotationNo' style={{color:theme.accTxtColor}}>
+            <div className='quotationNo'>
                 
                     <label>
                         Application No
@@ -224,7 +232,7 @@ const okay = () => {
                             </label>
                             {/* <br></br> */}
                             <input className='accInput' type='text' disabled style={{width:'100px', marginLeft:'10px', borderRadius:'5px', border:'1.5px solid #b0b1b3', backgroundColor:'#f0f1f3'}}/>
-                            <button className='searchBtn'><BiSearchAlt color=''/></button>
+                            <button className='searchBtn' style={{backgroundColor:theme.headerColor}}><BiSearchAlt color=''/></button>
                             <input className='accDis' type='text' disabled style={{width:'245px', marginLeft:'5px', borderRadius:'5px', backgroundColor:'#f0f1f3', border:'1.5px solid #b0b1b3'}}/>
                         
                         </div>
@@ -286,7 +294,7 @@ const okay = () => {
                                     </label>
                                     {/* <br></br> */}
                                     <input type='text' style={{width:'50px', marginLeft:'10px', borderRadius:'5px', border:'1.5px solid #b0b1b3'}}/>
-                                    <button className='searchBtn'><BiSearchAlt color=''/></button>
+                                    <button className='searchBtn' style={{backgroundColor:theme.headerColor}}><BiSearchAlt color=''/></button>
                                     <input type='text' className='loanDInput' disabled style={{width:'220px', marginLeft:'5px', borderRadius:'5px', backgroundColor:'#f0f1f3', border:'1.5px solid #b0b1b3'}}/>
                                 </div>
                                 <div className='currency' style={{marginBottom:'15px'}}>
@@ -340,7 +348,7 @@ const okay = () => {
                                     </label>
                                     {/* <br></br> */}
                                     <input type='text' style={{width:'80px', marginLeft:'10px', borderRadius:'5px', border:'1.5px solid #b0b1b3'}}/>
-                                    <button className='searchBtn'><BiSearchAlt color=''/></button>
+                                    <button className='searchBtn' style={{backgroundColor:theme.headerColor}}><BiSearchAlt color=''/></button>
                                     <input type='text' className='restInput' disabled style={{width:'250px', marginLeft:'5px', borderRadius:'5px', backgroundColor:'#f0f1f3', border:'1.5px solid #b0b1b3'}}/>
                                 </div>
                                 <div className='prinFreq' style={{marginBottom:'15px'}}>
@@ -349,7 +357,7 @@ const okay = () => {
                                     </label>
                                     {/* <br></br> */}
                                     <input type='text' style={{width:'80px', marginLeft:'10px', borderRadius:'5px', border:'1.5px solid #b0b1b3'}}/>
-                                    <button className='searchBtn'><BiSearchAlt color=''/></button>
+                                    <button className='searchBtn' style={{backgroundColor:theme.headerColor}}><BiSearchAlt color=''/></button>
                                     <input type='text' className='princInput' disabled style={{width:'250px', marginLeft:'5px', borderRadius:'5px', backgroundColor:'#f0f1f3', border:'1.5px solid #b0b1b3'}}/>
                                 </div>
                                 <div className='intFreq' style={{marginBottom:'15px'}}>
@@ -358,7 +366,7 @@ const okay = () => {
                                     </label>
                                     {/* <br></br> */}
                                     <input type='text' style={{width:'80px', marginLeft:'10px', borderRadius:'5px', border:'1.5px solid #b0b1b3'}}/>
-                                    <button className='searchBtn'><BiSearchAlt color=''/></button>
+                                    <button className='searchBtn' style={{backgroundColor:theme.headerColor}}><BiSearchAlt color=''/></button>
                                     <input type='text' className='freqInput' disabled style={{width:'250px', marginLeft:'5px', borderRadius:'5px', backgroundColor:'#f0f1f3', border:'1.5px solid #b0b1b3'}}/>
                                 </div>
                                 <div style={{marginBottom:'15px'}}>
